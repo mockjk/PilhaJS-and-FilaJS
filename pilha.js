@@ -29,6 +29,7 @@ export function removeItem(pilha, item) {
     }
 }
 
+//Procurar item
 export function findItem(pilha, item){
     if(pilha.indexOf(item) === -1 || 0){
         console.log(`Não foi possível encontrar "${item}"`)
@@ -37,6 +38,7 @@ export function findItem(pilha, item){
     }
 }
 
+//Deletar todos os itens
 export function deleteAllItems(pilha){
     for(let i = 0; i < pilha.length; ++i){
         pilha[i] = undefined
@@ -44,6 +46,7 @@ export function deleteAllItems(pilha){
     console.log("todos os itens da pilha foram deletados com sucesso", pilha)
 }
 
+//Mudar posição do item
 export function changePositionItem(pilha, item, psN){ //psV = posição velha | psN = posição nova 
     let psV = pilha.indexOf(item)
 
