@@ -82,6 +82,7 @@ export function changePositionItem(pilha, item, psN){ //psV = posição velha | 
     )
 }
 
+//Checar se está vazia
 export function isEmpty(pilha){
     if(pilha[0] !== undefined){
         return false
