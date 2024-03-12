@@ -12,30 +12,34 @@ export function addItem(pilha, item) {
         pilha[index] = item
         console.log(`"${item}" foi adicionado, na posição "${index}" da pilha`)
         console.log(pilha)
+        return
     }else{
         pilha.unshift(item)
         console.log(`"${item}" foi adicionado, na posição "${index}" da pilha`)
+        return
     }
 }
 
 // Retirar item
-export function removeItem(pilha, item) {
-    const index = pilha.indexOf(item);
-    if (index !== -1) {
-        pilha.splice(index, 1);
-        console.log(`Item "${item}" foi removido da pilha.`);
-    }else{
-        console.log(`Item "${item}" não foi encontrado na pilha.`);
+export function removeItem(pilha){
+    if(pilha.includes(undefined){
+        pilha[indexOf(undefined) - 1] = undefined
+        return
     }
+
+    pilha[pilha.length - 1] = undefined
+    return
 }
 
 //Procurar item
 export function findItem(pilha, item){
-    if(pilha.indexOf(item) === -1 || 0){
-        console.log(`Não foi possível encontrar "${item}"`)
-    }else{
-        console.log(`"${item}" está localizado na posição "${pilha.indexOf(item)}"`)
+   if(pilha.inclues(item)){
+       console.log(pilha.indexOf(item)
+       return
     }
+    
+    console.error("Item não foi encontrado")
+    return
 }
 
 //Deletar todos os itens
@@ -44,6 +48,7 @@ export function deleteAllItems(pilha){
         pilha[i] = undefined
     }
     console.log("todos os itens da pilha foram deletados com sucesso", pilha)
+    return
 }
 
 //Mudar posição do item
@@ -76,3 +81,12 @@ export function changePositionItem(pilha, item, psN){ //psV = posição velha | 
     console.log(pilha)
     )
 }
+
+export function isEmpty(pilha){
+    if(pilha[0] !== undefined){
+        return false
+    }
+    
+    return true
+}
+
