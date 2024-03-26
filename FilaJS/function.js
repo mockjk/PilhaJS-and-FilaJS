@@ -20,23 +20,27 @@ export function addItemQueue(queue, item){
     return
 }
 
-export function removeItemQueue(queue){
-     if(queue[0] !== undefined){
-        queue[0] = undefined
-        for(let i = 1; i < queue.length; i++){
-             queue[i-1] = queue[i]
-         }
-         queue[queue.length - 1] = undefined
-         return
-    }
-     console.error("A fila está vazia")
- }
-
 // export function removeItemQueue(queue){
-//    if(queue[0] !== undefined){
-//        queue.shift()
-//        return
-//    }
-//    console.error("A fila está vazia")
-// }
+//      if(queue[0] !== undefined){
+//         queue[0] = undefined
+//         for(let i = 1; i < queue.length; i++){
+//              queue[i-1] = queue[i]
+//          }
+//          queue[queue.length - 1] = undefined
+//          return
+//     }
+//      console.error("A fila está vazia")
+//  }
+
+export function removeItemQueue(queue){
+    if(queue[0] !== undefined){
+        let primeiro = queue[0]
+       for(let i = 1; i < queue.length; i++){
+            queue[i-1] = queue[i]
+        }
+        queue[queue.length - 1] = undefined
+        return
+   }
+    console.error("A fila está vazia")
+}
 
